@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Flask Heart</title>
+    </head>
+    <body>
+        <h1>Flask Heart</h1>
+        <p>Flask Heart is a simple web application that uses the Flask framework.</p>
+
+        {%for data in datas%}
+        <p>It uses the API developed by {{data['author']}} called {{data['title']}}</p>
+        <p>release day : {{data['date_posted']}}</p>
+        {%endfor%} 
+
+
+        <div className="main-container">
+            <h1>Heart Failure Prediction</h1>
+          <div className="form-container">
+          <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>
+              Age:
+              <input
+                className="form-input"
+                type="number"
+                name="age"
+                value={age}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            
+          <label>
+            Sex:
+            <select
+              className="form-input"
+              name="sex"
+              value={sex}
+              onChange={handleInputChange}
+            >
+              <option value="">--Please choose an option--</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </label>
+      
+              <br />
+              <label>
+              Resting Blood Pressure:
+              <input
+                className="form-input"
+                type="number"
+                name="restingBP"
+                value={restingBP}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Cholesterol:
+              <input
+                className="form-input"
+                type="number"
+                name="cholesterol"
+                value={cholesterol}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Fasting Blood Sugar:
+              <select
+                className="form-input"
+                name="fastingBloodSugar"
+                value={fastingBloodSugar}
+                onChange={handleInputChange}
+              >
+                <option value="">--Please choose an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </label>
+      
+            <br />
+            <label>
+            Maximum Heart Rate:
+              <input
+                className="form-input"
+                type="number"
+                name="maxHR"
+                value={maxHR}
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Exercise-Induced Angina:
+              <select
+                className="form-input"
+                name="exerciseInducedAngina"
+                value={exerciseInducedAngina}
+                onChange={handleInputChange}
+              >
+                <option value="">--Please choose an option--</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </label>
+            <br />
+            <label>
+              Oldpeak:
+              <input
+                className="form-input"
+                type="number"
+                name="oldPeak"
+                value={oldPeak}
+                placeholder="The ST depression induced by exercise relative to rest"
+                onChange={handleInputChange}
+              />
+            </label>
+            <br />
+            <label>
+              Chest Pain Type:
+              <select
+                className="form-input"
+                name="chestPainType"
+                value={chestPainType}
+                onChange={handleInputChange}
+              >
+                <option value="">--Please choose an option--</option>
+                <option value="ASY">ASY</option>
+                <option value="ATA">ATA</option>
+                <option value="NAP">NAP</option>
+                <option value="TA">TA</option>
+              </select>
+            </label>
+            <br />
+            <label>
+              Resting ECG:
+              <select
+                className="form-input"
+                name="restingECG"
+                value={restingECG}
+                onChange={handleInputChange}
+              >
+                <option value="">--Please choose an option--</option>
+                <option value="LVH">LVH</option>
+                <option value="Normal">Normal</option>
+                <option value="ST">ST</option>
+              </select>
+            </label>
+            <br />
+            <label>
+              ST Slope:
+              <select className="form-input" name="ST_Slope" value={ST_Slope} onChange={handleInputChange}>
+                <option value="">--Please choose an option--</option>
+                <option value="Down">Down</option>
+                <option value="Flat">Flat</option>
+                <option value="Up">Up</option>
+              </select>
+            </label>
+            <br/>
+            </div>
+            <br/>
+            <div>
+            <button type="submit" className="submit-button-green" >Submit</button>
+            </div>
+            <br/>
+            <div id="result">{resultMessage}</div>
+          </form>
+          </div>
+          </div>
+        
+      
+
+</html>
