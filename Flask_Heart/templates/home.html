@@ -1,90 +1,73 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Heart Failure Prediction</h1>
-<div class="row">
-<div class="col-md-8">
-<fieldset>
-<form method="POST" action="/submit">
-<label for="age">Age:</label>
-<input type="number" name="age" id="age">
-<br>
-<label for="sex">Sex:</label>
-<select name="sex" id="sex">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="male">Male</option>
-  <option value="female">Female</option>
-</select>
-<br>
-<label for="resting_bp">Resting Blood Pressure:</label>
-<input type="number" name="resting_bp" id="resting_bp">
-<br>
-<label for="cholesterol">Cholesterol:</label>
-<input type="number" name="cholesterol" id="cholesterol">
-<br>
-<label for="fasting_bs">Fasting Blood Sugar:</label>
-<select name="fasting_bs" id="fasting_bs">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="yes">Yes</option>
-  <option value="no">No</option>
-</select>
-<br>
-<label for="max_hr">Maximum Heart Rate:</label>
-<input type="number" name="max_hr" id="max_hr">
-<br>
-<label for="exercise_angina">Exercise-Induced Angina:</label>
-<select name="exercise_angina" id="exercise_angina">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="yes">Yes</option>
-  <option value="no">No</option>
-</select>
-<br>
-<label for="oldpeak">Oldpeak:</label>
-<input type="number" name="oldpeak" id="oldpeak">
-<br>
-<label for="chest_pain_type">Chest Pain Type:</label>
-<select name="chest_pain_type" id="chest_pain_type">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="ASY">ASY</option>
-  <option value="ATA">ATA</option>
-  <option value="NAP">NAP</option>
-  <option value="TA">TA</option>
-</select>
-<br>
-<label for="resting_ecg">Resting ECG:</label>
-<select name="resting_ecg" id="resting_ecg">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="LVH">LVH</option>
-  <option value="normal">Normal</option>
-  <option value="ST">ST</option>
-</select>
-<br>
-<label for="st_slope">ST Slope:</label>
-<select name="st_slope" id="st_slope">
-  <option value="not_an_option" selected>--Please choose an option--</option>
-  <option value="down">Down</option>
-  <option value="flat">Flat</option>
-  <option value="up">Up</option>
-</select>
-<br>
-<button type="submit">Submit</button>
-</form>
+<div class="content-section">
+  <form method="POST" action="/home">
+      {{ form.hidden_tag() }}
+      <fieldset class="form-group predict">
+        <legend class="border-bottom mb-4"> Predict </legend>
+        <div class="form-group predict">
+          {{ form.model.label(class="form-control-label") }}
+          {{ form.model(class="form-control form-control-lg") }}
+          <p class ="text-muted"> You can find more information about this model in the about section </p>
+        <div class="form-group predict">
+          {{ form.age.label(class="form-control-label") }}
+          {{ form.age(class="form-control form-control-lg") }}
+        </div>
+        <div class="form-group predict">
+          {{ form.sex.label(class="form-control-label") }}
+          {{ form.sex(class="form-control form-control-lg") }}
+        </div>
+        <div class="form-group predict">
+          {{ form.resting_bp.label(class="form-control-label") }}
+          {{ form.resting_bp(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.cholesterol.label(class="form-control-label") }}
+          {{ form.cholesterol(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.fasting_bs.label(class="form-control-label") }}
+          {{ form.fasting_bs(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.max_hr.label(class="form-control-label") }}
+          {{ form.max_hr(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.exercise_angina.label(class="form-control-label") }}
+          {{ form.exercise_angina(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.oldpeak.label(class="form-control-label") }}
+          {{ form.oldpeak(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.chest_pain_type.label(class="form-control-label") }}
+          {{ form.chest_pain_type(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.resting_ecg.label(class="form-control-label") }}
+          {{ form.resting_ecg(class="form-control form-control-lg") }}
+        </div>
+        
+        <div class="form-group predict">
+          {{ form.st_slope.label(class="form-control-label") }}
+          {{ form.st_slope(class="form-control form-control-lg") }}
+        </div>
+      </fieldset>
+      <div class="form-group predict">
+        {{ form.submit(class="btn btn-outline-info") }}
+      </div> 
+  </form>
 
-</fieldset>
-</div>
-<div class="col-md-4">
-  <div class="content-section">
-    <h3>Results</h3>
-      <p class='text-muted'>Here will be the results</p>
-          <div>
-              {% block content_prediction %} {% endblock content_prediction %}
-          </div>
-      </ul>
-    </p>
-  </div>
 
-</div>
-{% endblock content %}
 
-    
-
+{% endblock %}
 
