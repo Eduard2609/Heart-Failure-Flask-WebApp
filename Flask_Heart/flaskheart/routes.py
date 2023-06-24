@@ -61,6 +61,9 @@ def home():
                 flash (f'{prediction}''%', 'success')
             else:
                 flash (f'API request failed!', 'danger')
+        else:
+            flash (f'Please login first!', 'danger')
+            return redirect(url_for('login'))
     return render_template('home.html', form=form)
 
 
