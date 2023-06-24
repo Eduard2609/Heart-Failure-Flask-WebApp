@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>History</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Sex</th>
+                <th>Resting BP</th>
+                <th>Cholesterol</th>
+                <th>Fasting BS</th>
+                <th>Max HR</th>
+                <th>Exercise Angina</th>
+                <th>Oldpeak</th>
+                <th>Chest Pain Type</th>
+                <th>Resting ECG</th>
+                <th>ST Slope</th>
+                <th>Model</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{ row['age'] }}</td>
+                    <td>{{ row['sex'] }}</td>
+                    <td>{{ row['resting_bp'] }}</td>
+                    <td>{{ row['cholesterol'] }}</td>
+                    <td>{{ row['fasting_bs'] }}</td>
+                    <td>{{ row['max_hr'] }}</td>
+                    <td>{{ row['exercise_angina'] }}</td>
+                    <td>{{ row['oldpeak'] }}</td>
+                    <td>{{ row['chest_pain_type'] }}</td>
+                    <td>{{ row['resting_ecg'] }}</td>
+                    <td>{{ row['st_slope'] }}</td>
+                    <td>{{ row['model'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}

@@ -13,7 +13,3 @@ age,sex,resting_bp,cholesterol,fasting_bs,max_hr,exercise_angina,oldpeak,chest_p
 43,male,100,120,no,140,yes,0.2,ATA,normal,up,random_forest
 43,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
 43,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
-43,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
-60,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
-100,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
-60,male,100,120,no,140,yes,0.2,TA,normal,up,random_forest
