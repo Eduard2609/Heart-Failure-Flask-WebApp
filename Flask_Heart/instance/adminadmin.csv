@@ -1,5 +1,0 @@
-age,sex,resting_bp,cholesterol,fasting_bs,max_hr,exercise_angina,oldpeak,chest_pain_type,resting_ecg,st_slope,model
-23,male,89,100,no,103,no,0,NAP,normal,down,dtc
-23,male,89,100,no,103,no,0,NAP,normal,down,dtc
-23,female,89,100,no,103,no,0,NAP,normal,down,dtc
-100,female,89,100,no,103,no,0,NAP,normal,down,dtc

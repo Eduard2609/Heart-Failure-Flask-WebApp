@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block content %}
     <h1>History</h1>
+    
     <table class="table">
         <thead>
             <tr>
@@ -16,6 +17,7 @@
                 <th>Resting ECG</th>
                 <th>ST Slope</th>
                 <th>Model</th>
+
             </tr>
         </thead>
         <tbody>
@@ -37,4 +39,5 @@
             {% endfor %}
         </tbody>
     </table>
+    <a href="{{ url_for('download_csv') }}" class="btn btn-primary mb-3">Download CSV</a>
 {% endblock content %}

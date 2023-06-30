@@ -9,3 +9,5 @@ def format_api_result(api_result):
     formatted_message = f'{result_message} {probability}.'
 
     return formatted_message
+
+

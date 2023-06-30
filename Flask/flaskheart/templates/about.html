@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>About</h1>
+<p>
+  Heart Disease Predictor is a simple web application that uses the Flask framework to provide a heart disease risk prediction service. The application uses an API developed by Eduard Olteanu to predict the risk of heart disease based on user input. Users can enter their personal information and receive a risk percentage, as well as view their prediction history.
+</p>
+<p>
+        The model used to predict are :
+        <ul>
+                <li>Logistic Regression</li>
+                <li>Random Forest</li>
+                <li>Support Vector Machine</li>
+                <li>Decision Tree Classifier</li>
+        <ul>
+</p>
+<br>
+<table class="table">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>Cross Validation Score</th>
+            <th>Recall</th>
+            <th>ROC AUC score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Logistic Regression</td>
+            <td>0.842391</td>
+            <td>0.860632</td>
+            <td>0.894737</td>
+            <td>0.840627</td>
+          </tr>
+          <tr>
+            <td>Random Forest</td>
+            <td>0.842391</td>
+            <td>0.870153</td>
+            <td>0.873684</td>
+            <td>0.841336</td>
+          </tr>
+          <tr>
+            <td>Naive Bayes</td>
+            <td>0.826087</td>
+            <td>0.851135</td>
+            <td>0.821053</td>
+            <td>0.826257</td>
+          </tr>
+          <tr>
+            <td>SVM</td>
+            <td>0.853261</td>
+            <td>0.867876</td>
+            <td>0.873684</td>
+            <td>0.852572</td>
+          </tr>
+          <tr>
+            <td>Decision Tree</td>
+            <td>0.815217</td>
+            <td>0.835567</td>
+            <td>0.873684</td>
+            <td>0.813247</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+{% endblock content %}

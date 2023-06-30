@@ -7,8 +7,10 @@ def save_data_to_csv(user_data, csv_file):
     csv_path = os.path.join(app.instance_path, csv_file)
     
     # Define the fieldnames for the CSV file
-    fieldnames = ['age', 'sex', 'resting_bp', 'cholesterol', 'fasting_bs', 'max_hr', 'exercise_angina', 'oldpeak', 'chest_pain_type', 'resting_ecg', 'st_slope', 'model']
+    fieldnames = ['age', 'sex', 'resting_bp', 'cholesterol', 'fasting_bs', 'max_hr', 'exercise_angina', 'oldpeak', 'chest_pain_type', 'resting_ecg', 'st_slope', 'model', 'risk']
     
+    if 'risk' not in fieldnames:
+        fieldnames.append('risk')
     # Check if the CSV file already exists
     file_exists = os.path.isfile(csv_path)
     
