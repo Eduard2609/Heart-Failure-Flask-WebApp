@@ -1,0 +1,9 @@
+age,sex,resting_bp,cholesterol,fasting_bs,max_hr,exercise_angina,oldpeak,chest_pain_type,resting_ecg,st_slope,model,risk
+47,female,111,213,no,130,yes,1.5,TA,ST,flat,logistic_regression,75.82
+47,female,111,213,no,130,yes,1.5,TA,ST,flat,random_forest,67.0
+47,female,111,213,no,130,yes,1.5,TA,ST,flat,svm,84.84
+47,female,111,213,no,130,yes,1.5,TA,ST,flat,dtc,64.29
+53,male,114,183,no,120,no,0,NAP,normal,down,dtc,42.11
+53,male,114,183,no,120,no,0,NAP,normal,down,svm,11.01
+53,male,114,183,no,120,no,0,NAP,normal,down,random_forest,28.0
+53,male,114,183,no,120,no,0,NAP,normal,down,logistic_regression,6.62
